@@ -27,12 +27,12 @@ deploy:
 	fi
 	@if [ "$(RPC_URL)" = "localhost" ]; then \
 		if [ "$(ETH_KEYSTORE_ACCOUNT)" = "scaffold-eth-default" ]; then \
-			forge script $(DEPLOY_SCRIPT) --rpc-url localhost --password localhost --broadcast --via-ir --legacy --ffi; \
+			forge script $(DEPLOY_SCRIPT) --rpc-url localhost --password localhost --broadcast --legacy --ffi; \
 		else \
-			forge script $(DEPLOY_SCRIPT) --rpc-url localhost --broadcast --legacy --via-ir --ffi; \
+			forge script $(DEPLOY_SCRIPT) --rpc-url localhost --broadcast --legacy --ffi; \
 		fi \
 	else \
-		forge script $(DEPLOY_SCRIPT) --rpc-url $(RPC_URL) --broadcast --legacy --via-ir --ffi; \
+		forge script $(DEPLOY_SCRIPT) --rpc-url $(RPC_URL) --broadcast --legacy --ffi; \
 	fi
 
 # Deploy and generate ABIs
